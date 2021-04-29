@@ -1,0 +1,37 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  target-branch: master
+  reviewers:
+  - MarkEWaite
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: org.jenkins-ci.plugins:git-client
+    versions:
+    - 3.6.0
+    - 3.7.0
+  - dependency-name: org.jenkins-ci.plugins:promoted-builds
+    versions:
+    - "3.7"
+    - "3.9"
+  - dependency-name: org.jenkins-ci.plugins:plugin
+    versions:
+    - "4.15"
+    - "4.16"
+    - "4.17"
+  - dependency-name: nl.jqno.equalsverifier:equalsverifier
+    versions:
+    - 3.5.2
+    - 3.5.4
+    - 3.5.5
+  - dependency-name: org.jenkins-ci.plugins.workflow:workflow-multibranch
+    versions:
+    - "2.22"
+  - dependency-name: org.apache.maven.plugins:maven-checkstyle-plugin
+    versions:
+    - 3.1.1
